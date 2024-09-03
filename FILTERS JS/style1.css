@@ -1,0 +1,194 @@
+body {
+    font-family: "Radio Canada Big", sans-serif;
+    font-weight: 400;
+}
+
+.headerpart {
+    padding: 1% 5%;
+    background-color: rgb(235, 252, 254);
+    position: fixed;
+    top: 0;
+    z-index: 999;
+}
+
+.filtersrow {
+    margin-top: 10%;
+}
+
+.searchbar {
+    display: flex;
+    height: 46px;
+    border: none;
+}
+
+.searchbar input {
+    border: 2px solid #6d6d6d;
+    border-radius: 10px 0 0 10px;
+    width: 200px;
+}
+
+.searchbar button {
+    border: 2px solid #6d6d6d;
+    background-color: #fbb102;
+    border-radius: 0 10px 10px 0;
+    border-left: 0;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.searchbar button:hover {
+    border: 2px solid #6d6d6d;
+    border-left: 0; 
+}
+.filtersmenu h6 {
+    color: #194b80;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.filterbutton {
+    margin-right: 60px ;
+    padding: 10px 12px;
+    border-radius: 8px;
+    background-color: #fbb102;
+    font-family: "Radio Canada Big", sans-serif;
+    font-weight: 600;
+}
+
+.homebtn button {
+    margin-left: 60px ;
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 3px solid #194b80;
+    background-color: transparent;
+    font-family: "Radio Canada Big", sans-serif;
+    font-weight: 600;
+}
+
+.filterbutton:hover, .homebtn button:hover {
+    border: 3px solid #fbb102;
+    background-color: transparent;
+}
+
+
+
+/* Filters - Menu items */
+
+.filters input {
+    padding: 8px 10px;
+    font-family: "Radio Canada Big", sans-serif;
+    font-weight: 400;
+    border-radius: 8px;
+    width: 140px;
+    margin:0 4px;
+    text-align: center;
+}
+
+.filter-categories button, .filters .SubBtn {
+    padding: 0 14px;
+    border-radius: 8px;
+    margin-left: 10px;
+    border: 2px solid #194b80;
+    background-color: transparent;
+    padding: 8px 18px;
+}
+
+.filter-categories button:hover, .filters .SubBtn:hover {
+    background-color: #fbb102;
+    color: #000;
+    border: none;
+}
+
+.filter-categories button:focus {
+    background-color: #fbb102;
+    color: #000;
+    border: none;
+}
+
+/* Product Cards */
+
+.filter-cards {
+    margin-top: 20px;
+    margin-left: 2%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    
+    
+}
+
+.card {
+    width:300px;
+    background-color:#F6F6F6;
+    padding: 4px;
+    border-radius: 16px;
+    border: none;
+    font-family: "Radio Canada Big", sans-serif;
+    transition: transform 0.4s ease-in-out;
+    margin: 2%;
+}
+
+.card.hide {
+    display: none;
+}
+
+.card:hover {
+    box-shadow: 0 0 20px 4px rgba(67, 67, 67, 0.274);
+    transform: scale(1.05);
+}
+
+.card-body {
+    padding: 14px  20px;
+
+}
+
+.card-body h3 {
+    color: #194b80;
+}
+
+.card-body h3:hover {
+    color: #ff9500;
+}
+
+.card img {
+    transition: transform 0.3s ease-in-out;
+    object-fit: cover;
+    height: 300px;
+    align-items: center;
+
+}
+
+
+.product-price {
+    display: flex;
+    margin-top: 4px;
+}
+
+.product-price h5 {
+    font-weight: 700;
+    font-size: 26px;
+    color: #194b80;
+}
+
+.product-price p {
+    font-weight: 500;
+    font-size: 20px;
+    color: #6d6d6d;
+}
+
+.card-body button {
+    border: none;
+    font-weight: 700;
+    font-family: "Radio Canada Big", sans-serif;
+    
+    background-color: #fbb102;
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 10px;
+    margin-bottom: 4px;
+}
+
+.card-body button:hover {
+    background-color: transparent;
+    border: 2px solid #142bbf;
+}

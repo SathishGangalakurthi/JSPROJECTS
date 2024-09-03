@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Radio+Canada+Big:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./style1.css">
+
+</head>
+<body>
+
+<!-- NAVBAR-->  
+    
+  <div class="container-fluid headerpart d-flex justify-content-between  align-items-center">
+    <div class="logo">
+      <a class="navbar-brand" href="#"><img src="./images/logo.png" height="100 px" alt=""></a>
+    </div>
+
+
+    <div class="filter-categories">
+      <button class="active" data-name="all"> Home </button>
+      <button data-name="earbuds"> Earbuds </button>
+      <button data-name="soundbars"> Soundbars </button>
+      <button data-name="earphones"> Earphones </button>
+      <button data-name="speakers"> Speakers </button>
+    </div>
+
+<!-- Navbar Menu Items -->    
+    <div class="searchbar">
+      <input class="form-control" type="search" placeholder="Search Products..." aria-label="Search">
+    <button class="btn  my-2 my-sm-0 " type="submit">Search</button>
+    </div>
+    </div>
+<!-- Filters Menu-->
+
+
+
+<div class=" container-fluid filtersrow d-flex justify-content-between">
+  <div class="homebtn"><a href="../index.html"><button><i class="fa-solid fa-caret-right"></i> &nbsp; Main Dashboard</button></a></div>
+  <div class="filters d-flex px-5 ">
+    <input type="number" placeholder="Min Price" id="min" />
+    <input type="number" placeholder="Max Price" id="max"/>
+    <input type="button" value="Filter" class="SubBtn">
+  </div>
+  <!-- <div class="filtersmenu">
+    <button class="btn filterbutton" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i class="fa-solid fa-filter"></i> &nbsp;Filter Products</button>
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+      <div class="offcanvas-header">
+        <h6 class="offcanvas-title" id="offcanvasRightLabel"><i class="fa-solid fa-filter"></i> &nbsp; Filter Products:</h6>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div> -->
+      
+<!-- Filters by Category-->
+
+  <!--    <div class="offcanvas-body">
+        <p>By Category:</p>
+        <div class="filter-categories">
+          <button class="active" data-name="all"> All </button>
+          <button data-name="earbuds"> Earbuds </button>
+          <button data-name="soundbars"> Soundbars </button>
+          <button data-name="earphones"> Earphones </button>
+          <button data-name="speakers"> Speakers </button>
+        </div>
+        <hr>
+        -->
+
+<!-- Filters by Price Range-->          
+<!--
+        <p>By price range:</p>
+        <div class="filters d-flex">
+          <input type="number" placeholder="Min Price" id="min" />
+          <input type="number" placeholder="Max Price" id="max"/>
+          <input type="button" value="Filter" class="SubBtn">
+        </div>
+        <hr>
+        <div class="lowtohigh">
+          <p>Sort by:</p>
+          <button onclick="sortPrices()" class="filter-button px-3 py-2"> Price: low to High </button>
+          <button class="filter-button px-3 py-2"> Price: High to Low </button>
+        </div>
+        <hr>
+      </div>
+    </div>
+  </div> -->
+
+</div>
+  
+<!-- Products Cards -->
+<div class="container-fluid Products mt-0">
+  <div class="filter-cards" id="product-list">
+
+<!-- Earbuds -->
+
+    <div class="card" data-name="earbuds" data-value="1999">
+      <img src="./images/earbuds01.png" alt="">
+      <div class="card-body">
+        <h3>SuperPods Halo</h3>
+        <h6>ANC Now with 3D Soundstage</h6>
+        <div class="product-price">
+          <h5><strong>₹1,999</strong></h5>
+          <p class="mx-2"><strike>₹5,999</strike></p>
+        </div>
+        <button class="text-center"><i class="fa-solid fa-angles-right"></i> &nbsp; Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="card" data-name="earbuds" data-value="1899">
+      <img src="./images/earbuds02.png" alt="">
+      <div class="card-body">
+        <h3>SuperPods Dueto</h3>
+        <h6>Extra Driver For Extra Definition</h6>
+        <div class="product-price">
+          <h5><strong>₹1,899</strong></h5>
+          <p class="mx-2"><strike>₹5,999</strike></p>
+        </div>
+        <button class="text-center"><i class="fa-solid fa-angles-right"></i> &nbsp; Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="card" data-name="earbuds" data-value="1199">
+      <img src="./images/earbuds03.png" alt="">
+      <div class="card-body">
+        <h3>DuoPods i1</h3>
+        <h6>A-One Style. A-One Performance.</h6>
+        <div class="product-price">
+          <h5><strong>₹1,199</strong></h5>
+          <p class="mx-2"><strike>₹3,499</strike></p>
+        </div>
+        <button class="text-center"><i class="fa-solid fa-angles-right"></i> &nbsp; Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="card" data-name="earbuds" data-value="999">
+      <img src="./images/earbuds04.png" alt="">
+      <div class="card-body">
+        <h3>DuoPods i3</h3>
+        <h6>Looks Like A Gem. NFC</h6>
+        <div class="product-price">
+          <h5><strong>₹999</strong></h5>
+          <p class="mx-2"><strike>₹3,299</strike></p>
+        </div>
+        <button class="text-center"><i class="fa-solid fa-angles-right"></i> &nbsp; Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="card" data-name="earbuds" data-value="1399">
+      <img src="./images/earbuds05.png" alt="">
+      <div class="card-body">
+        <h3>DuoPods i5</h3>
+        <h6>Hear Every Beat and Note in High Definition</h6>
+        <div class="product-price">
+          <h5><strong>₹1,399</strong></h5>
+          <p class="mx-2"><strike>₹4,699</strike></p>
+        </div>
+        <button class="text-center"><i class="fa-solid fa-angles-right"></i> &nbsp; Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="card" data-name="earbuds" data-value="1299">
+      <img src="./images/earbuds06.png" alt="">
+      <div class="card-body">
+        <h3>DuoPods A750</h3>
+        <h6>Twice The Connection. Twice The Fun.</h6>
+        <div class="product-price">
+          <h5><strong>₹1,299</strong></h5>
+          <p class="mx-2"><strike>₹2,999</strike></p>
+        </div>
+        <button class="text-center"><i class="fa-solid fa-angles-right"></i> &nbsp; Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="card" data-name="earbuds" data-value="1399">
+      <img src="./images/earbuds07.png" alt="">
+      <div class="card-body">
+        <h3>Commando X9</h3>
+        <h6>Get Your Game On</h6>
+        <div class="product-price">
+          <h5><strong>₹1,399</strong></h5>
+          <p class="mx-2"><strike>₹2,499</strike></p>
+        </div>
+        <button class="text-center"><i class="fa-solid fa-angles-right"></i> &nbsp; Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="card" data-name="earbuds" data-value="1599">
+      <img src="./images/earbuds08.png" alt="">
+      <div class="card-body">
+        <h3>DuoPods A650</h3>
+        <h6>Bass that Rocks Battery that Lasts</h6>
+        <div class="product-price">
+          <h5><strong>₹1,599</strong></h5>
+          <p class="mx-2"><strike>₹2,899</strike></p>
+        </div>
+        <button class="text-center"><i class="fa-solid fa-angles-right"></i> &nbsp; Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="card" data-name="earbuds" data-value="999">
+      <img src="./images/earbuds09.png" alt="">
+      <div class="card-body">
+        <h3>DuoPods F40</h3>
+        <h6>Full Of Charge, Hell Of A Bass</h6>
+        <div class="product-price">
+          <h5><strong>₹999</strong></h5>
+          <p class="mx-2"><strike>₹2,499</strike></p>
+        </div>
+        <button class="text-center"><i class="fa-solid fa-angles-right"></i> &nbsp; Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="card" data-name="earbuds" data-value="1789">
+      <img src="./images/earbuds10.png" alt="">
+      <div class="card-body">
+        <h3>Commando Z7</h3>
+        <h6>Conquer the Game. Hear the Glory.</h6>
+        <div class="product-price">
+          <h5><strong>₹1,789</strong></h5>
+          <p class="mx-2"><strike>₹3,299</strike></p>
+        </div>
+        <button class="text-center"><i class="fa-solid fa-angles-right"></i> &nbsp; Add to Cart</button>
+      </div>
+    </div>
+
+<!-- Soundbars--> 
+ 
+    <div class="card" data-name="soundbars" data-value="12999">
+      <img src="./images/soundbar10.png" alt="">
+      <div class="card-body">
+        <h3>Fort Q700 D</h3>
+        <h6>700 Watts Dolby Audio Soundbar</h6>
+        <div class="product-price">
+          <h5><strong>₹12,999</strong></h5>
+          <p class="mx-2"><strike>₹74,999</strike></p>
+        </div>
+        <button class="text-center"><i class="fa-solid fa-angles-right"></i> &nbsp; Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="card" data-name="soundbars" data-value="2999">
+      <img src="./images/soundbar09.png" alt="">
+      <div class="card-body">
+        <h3>Fort R50</h3>
+        <h6>50 Watts Soundbar with External Subwoofer</h6>
+        <div class="product-price">
+          <h5><strong>₹2,999</strong></h5>
+          <p class="mx-2"><strike>₹8,499</strike></p>
+        </div>
+        <button class="text-center"><i class="fa-solid fa-angles-right"></i> &nbsp; Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="card" data-name="soundbars" data-value="2499">
+      <img src="./images/soundbar08.png" alt="">
+      <div class="card-body">
+        <h3>Fort S36</h3>
+        <h6>36 Watt Soundbar</h6>
+        <div class="product-price">
+          <h5><strong>₹2,499</strong></h5>
+          <p class="mx-2"><strike>₹7,699</strike></p>
+        </div>
+        <button class="text-center"><i class="fa-solid fa-angles-right"></i> &nbsp; Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="card" data-name="soundbars" data-value="4599">
+      <img src="./images/soundbar07.png" alt="">
+      <div class="card-body">
+        <h3>Fort S100</h3>
+        <h6>100 Watts Soundbar</h6>
+        <div class="product-price">
+          <h5><strong>₹4,599</strong></h5>
+          <p class="mx-2"><strike>₹9,899</strike></p>
+        </div>
+        <button class="text-center"><i class="fa-solid fa-angles-right"></i> &nbsp; Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="card" data-name="soundbars" data-value="14499">
+      <img src="./images/soundbar06.png" alt="">
+      <div class="card-body">
+        <h3>Fort Q500</h3>
+        <h6>500 Watts Soundbar</h6>
+        <div class="product-price">
+          <h5><strong>₹14,499</strong></h5>
+          <p class="mx-2"><strike>₹25,999</strike></p>
+        </div>
+        <button class="text-center"><i class="fa-solid fa-angles-right"></i> &nbsp; Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="card" data-name="soundbars" data-value="1499">
+      <img src="./images/soundbar05.png" alt="">
+      <div class="card-body">
+        <h3>Fort R18</h3>
+        <h6>18 Watts Soundbar with 6Hrs Battery Life</h6>
+        <div class="product-price">
+          <h5><strong>₹1,499</strong></h5>
+          <p class="mx-2"><strike>₹2,999</strike></p>
+        </div>
+        <button class="text-center"><i class="fa-solid fa-angles-right"></i> &nbsp; Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="card" data-name="soundbars" data-value="5999">
+      <img src="./images/soundbar04.png" alt="">
+      <div class="card-body">
+        <h3>Fort S180</h3>
+        <h6>180 Watt Soundbar with Subwoofer</h6>
+        <div class="product-price">
+          <h5><strong>₹5,999</strong></h5>
+          <p class="mx-2"><strike>₹32,499</strike></p>
+        </div>
+        <button class="text-center"><i class="fa-solid fa-angles-right"></i> &nbsp; Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="card" data-name="soundbars" data-value="12999">
+      <img src="./images/soundbar03.png" alt="">
+      <div class="card-body">
+        <h3>Fort Q350</h3>
+        <h6>350 Watts Soundbar</h6>
+        <div class="product-price">
+          <h5><strong>₹12,999</strong></h5>
+          <p class="mx-2"><strike>₹29,999</strike></p>
+        </div>
+        <button class="text-center"><i class="fa-solid fa-angles-right"></i> &nbsp; Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="card" data-name="soundbars" data-value="8999">
+      <img src="./images/soundbar02.png" alt="">
+      <div class="card-body">
+        <h3>Fort S440</h3>
+        <h6>440 Watt Soundbar</h6>
+        <div class="product-price">
+          <h5><strong>₹8,999</strong></h5>
+          <p class="mx-2"><strike>₹44,999</strike></p>
+        </div>
+        <button class="text-center"><i class="fa-solid fa-angles-right"></i> &nbsp; Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="card" data-name="soundbars" data-value="1799">
+      <img src="./images/soundbar01.png" alt="">
+      <div class="card-body">
+        <h3>Fort S24</h3>
+        <h6>24 Watts Mini Soundbar</h6>
+        <div class="product-price">
+          <h5><strong>₹1,799</strong></h5>
+          <p class="mx-2"><strike>₹3,999</strike></p>
+        </div>
+        <button class="text-center"><i class="fa-solid fa-angles-right"></i> &nbsp; Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="card" data-name="earphones" data-value="1299">
+      <img src="./images/earphones01.webp" alt="">
+      <div class="card-body">
+        <h3>Collar Classic Pro</h3>
+        <h6>72 Hrs Of Battery Life With Super Fast Charging</h6>
+        <div class="product-price">
+          <h5><strong>₹1,299</strong></h5>
+          <p class="mx-2"><strike>₹2,999</strike></p>
+        </div>
+        <button class="text-center"><i class="fa-solid fa-angles-right"></i> &nbsp; Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="card" data-name="earphones" data-value="1099">
+      <img src="./images/earphones02.webp" alt="">
+      <div class="card-body">
+        <h3>Collar D25</h3>
+        <h6>Light Weight Neckband</h6>
+        <div class="product-price">
+          <h5><strong>₹1,099</strong></h5>
+          <p class="mx-2"><strike>₹2,899</strike></p>
+        </div>
+        <button class="text-center"><i class="fa-solid fa-angles-right"></i> &nbsp; Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="card" data-name="earphones" data-value="1299">
+      <img src="./images/earphones03.webp" alt="">
+      <div class="card-body">
+        <h3>Collar Flash</h3>
+        <h6>Crystal Clear Calling with 24hrs of Playtime</h6>
+        <div class="product-price">
+          <h5><strong>₹1,299</strong></h5>
+          <p class="mx-2"><strike>₹2,999</strike></p>
+        </div>
+        <button class="text-center"><i class="fa-solid fa-angles-right"></i> &nbsp; Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="card" data-name="earphones" data-value="1499">
+      <img src="./images/earphones04.webp" alt="">
+      <div class="card-body">
+        <h3>Collar Flash Pro</h3>
+        <h6>Crystal Clear Calling with 72hrs of Playtime</h6>
+        <div class="product-price">
+          <h5><strong>₹1,499</strong></h5>
+          <p class="mx-2"><strike>₹3,299</strike></p>
+        </div>
+        <button class="text-center"><i class="fa-solid fa-angles-right"></i> &nbsp; Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="card" data-name="earphones" data-value="999">
+      <img src="./images/earphones05.webp" alt="">
+      <div class="card-body">
+        <h3>Conquer X</h3>
+        <h6>14hrs Play Time with Fast Charging</h6>
+        <div class="product-price">
+          <h5><strong>₹999</strong></h5>
+          <p class="mx-2"><strike>₹1,599</strike></p>
+        </div>
+        <button class="text-center"><i class="fa-solid fa-angles-right"></i> &nbsp; Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="card" data-name="earphones" data-value="399">
+      <img src="./images/earphones06.webp" alt="">
+      <div class="card-body">
+        <h3>Rock & Roll E5</h3>
+        <h6>Extra Powerful Bass with in-line Mic</h6>
+        <div class="product-price">
+          <h5><strong>₹399</strong></h5>
+          <p class="mx-2"><strike>₹799</strike></p>
+        </div>
+        <button class="text-center"><i class="fa-solid fa-angles-right"></i> &nbsp; Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="card" data-name="earphones" data-value="349">
+      <img src="./images/earphones07.webp" alt="">
+      <div class="card-body">
+        <h3>Bassheads 104</h3>
+        <h6>Stylish Hawk-inspired Design, Super Extra Bass</h6>
+        <div class="product-price">
+          <h5><strong>₹349</strong></h5>
+          <p class="mx-2"><strike>₹899</strike></p>
+        </div>
+        <button class="text-center"><i class="fa-solid fa-angles-right"></i> &nbsp; Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="card" data-name="earphones" data-value="249">
+      <img src="./images/earphones08.webp" alt="">
+      <div class="card-body">
+        <h3>Bassheads 100</h3>
+        <h6>Wired Earphone with Premium HD Sound</h6>
+        <div class="product-price">
+          <h5><strong>₹249</strong></h5>
+          <p class="mx-2"><strike>₹699</strike></p>
+        </div>
+        <button class="text-center"><i class="fa-solid fa-angles-right"></i> &nbsp; Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="card" data-name="earphones" data-value="449">
+      <img src="./images/earphones09.webp" alt="">
+      <div class="card-body">
+        <h3>Bassheads 152</h3>
+        <h6>with voice assistant, Super Extra Bass</h6>
+        <div class="product-price">
+          <h5><strong>₹449</strong></h5>
+          <p class="mx-2"><strike>₹1,299</strike></p>
+        </div>
+        <button class="text-center"><i class="fa-solid fa-angles-right"></i> &nbsp; Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="card" data-name="earphones" data-value="499">
+      <img src="./images/earphones10.webp" alt="">
+      <div class="card-body">
+        <h3>Bassheads 102</h3>
+        <h6>Wired Earphones 10mm Drivers</h6>
+        <div class="product-price">
+          <h5><strong>₹499</strong></h5>
+          <p class="mx-2"><strike>₹1,399</strike></p>
+        </div>
+        <button class="text-center"><i class="fa-solid fa-angles-right"></i> &nbsp; Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="card" data-name="speaker" data-value="399">
+      <img src="./images/speaker01.jpg" alt="">
+      <div class="card-body">
+        <h3>Multi Media Speakers 2.0</h3>
+        <h6>with AUX, USB and Volume Control</h6>
+        <div class="product-price">
+          <h5><strong>₹399</strong></h5>
+          <p class="mx-2"><strike>₹849</strike></p>
+        </div>
+        <button class="text-center"><i class="fa-solid fa-angles-right"></i> &nbsp; Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="card" data-name="speaker" data-value="1699">
+      <img src="./images/speaker02.jpg" alt="">
+      <div class="card-body">
+        <h3>boAt Bluetooth Speaker</h3>
+        <h6>with 10W RMS Stereo Sound</h6>
+        <div class="product-price">
+          <h5><strong>₹1,699</strong></h5>
+          <p class="mx-2"><strike>₹3,449</strike></p>
+        </div>
+        <button class="text-center"><i class="fa-solid fa-angles-right"></i> &nbsp; Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="card" data-name="speaker" data-value="699">
+      <img src="./images/speaker03.jpg" alt="">
+      <div class="card-body">
+        <h3>Bluetooth 9W Speaker</h3>
+        <h6>TWS Function, Powerful Bass</h6>
+        <div class="product-price">
+          <h5><strong>₹699</strong></h5>
+          <p class="mx-2"><strike>₹2,449</strike></p>
+        </div>
+        <button class="text-center"><i class="fa-solid fa-angles-right"></i> &nbsp; Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="card" data-name="speaker" data-value="898">
+      <img src="./images/speaker04.jpg" alt="">
+      <div class="card-body">
+        <h3>Portronics SoundDrum</h3>
+        <h6>Powerful Bass, Inbuilt-FM</h6>
+        <div class="product-price">
+          <h5><strong>₹898</strong></h5>
+          <p class="mx-2"><strike>₹2,649</strike></p>
+        </div>
+        <button class="text-center"><i class="fa-solid fa-angles-right"></i> &nbsp; Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="card" data-name="speaker" data-value="2449">
+      <img src="./images/speaker05.jpg" alt="">
+      <div class="card-body">
+        <h3>JBL Go 3 Speaker</h3>
+        <h6>Rugged Fabric Design, Waterproof, Type C</h6>
+        <div class="product-price">
+          <h5><strong>₹2,449</strong></h5>
+          <p class="mx-2"><strike>₹3,999</strike></p>
+        </div>
+        <button class="text-center"><i class="fa-solid fa-angles-right"></i> &nbsp; Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="card" data-name="speaker" data-value="1549">
+      <img src="./images/speaker06.jpg" alt="">
+      <div class="card-body">
+        <h3>boAt Stone 580 Speaker</h3>
+        <h6>12W RMS Stereo Sound, LED Lights</h6>
+        <div class="product-price">
+          <h5><strong>₹1,549</strong></h5>
+          <p class="mx-2"><strike>₹4,990</strike></p>
+        </div>
+        <button class="text-center"><i class="fa-solid fa-angles-right"></i> &nbsp; Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="card" data-name="speaker" data-value="799">
+      <img src="./images/speaker07.jpg" alt="">
+      <div class="card-body">
+        <h3>Mivi Play Bluetooth Speaker</h3>
+        <h6>Portable and Built in Mic-Black</h6>
+        <div class="product-price">
+          <h5><strong>₹799</strong></h5>
+          <p class="mx-2"><strike>₹1,990</strike></p>
+        </div>
+        <button class="text-center"><i class="fa-solid fa-angles-right"></i> &nbsp; Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="card" data-name="speaker" data-value="1699">
+      <img src="./images/speaker08.jpg" alt="">
+      <div class="card-body">
+        <h3>boAt Stone 352 Speaker</h3>
+        <h6>TWS Feature, Up to 12H Total Playtime</h6>
+        <div class="product-price">
+          <h5><strong>₹1,699</strong></h5>
+          <p class="mx-2"><strike>₹3,490</strike></p>
+        </div>
+        <button class="text-center"><i class="fa-solid fa-angles-right"></i> &nbsp; Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="card" data-name="speaker" data-value="399">
+      <img src="./images/speaker09.jpg" alt="">
+      <div class="card-body">
+        <h3>2.0 Multimedia Speaker</h3>
+        <h6>Deep bass stereo speakers for PC/Laptop</h6>
+        <div class="product-price">
+          <h5><strong>₹399</strong></h5>
+          <p class="mx-2"><strike>₹1,890</strike></p>
+        </div>
+        <button class="text-center"><i class="fa-solid fa-angles-right"></i> &nbsp; Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="card" data-name="speaker" data-value="659">
+      <img src="./images/speaker10.jpg" alt="">
+      <div class="card-body">
+        <h3>PC gaming speaker</h3>
+        <h6>USB Support, Volume Control, and RGB Lights</h6>
+        <div class="product-price">
+          <h5><strong>₹659</strong></h5>
+          <p class="mx-2"><strike>₹1,490</strike></p>
+        </div>
+        <button class="text-center"><i class="fa-solid fa-angles-right"></i> &nbsp; Add to Cart</button>
+      </div>
+    </div>
+
+
+  </div>
+</div>
+ 
+
+
+<script>
+let MyBtn = document.querySelector(".SubBtn");
+let dataValue = document.querySelectorAll(".card");
+
+
+
+dataValue.forEach(function(item){
+    console.log(item);
+    MyBtn.addEventListener('click' , function(){
+        let x = document.getElementById("min").value;
+        let y = document.getElementById("max").value;
+
+        let xMin = parseInt(x);
+        let yMax = parseInt(y);
+
+        let DataItems = item.getAttribute('data-value');
+
+        if(DataItems >= xMin && DataItems <= yMax ){
+            item.style.display="block";
+        }
+        else{
+            item.style.display="none";
+        }
+    })
+})
+</script>
+</body>
+</html>
