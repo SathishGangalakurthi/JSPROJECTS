@@ -1,0 +1,320 @@
+
+
+
+.loginform {
+    background-color: #0025aa;
+    color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+.login-form h3 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 18px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.form-group input {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.remember label {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+}
+
+.remember a, .register a {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    text-decoration: none;
+    color: yellow;
+}
+.remember a:hover, .register a:hover {
+    color: #00f8fc;
+    font-weight: 600;
+}
+
+.button {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+.button:hover {
+    background-color: #ffffff;
+    color: #002EDC;
+}
+
+
+/* Login and Verify Pin Popups */
+
+
+.alertbox-container, .popup-container {
+    position: absolute;
+    top: 1;
+    left: 0;
+    right: 0;
+    margin:0 42%;
+
+}
+
+.alertbox, .popup-card {
+    background: #ffffff;
+    padding: 40px ;
+    border-radius: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px;
+        
+}
+
+.alertbox h5, .popup-card h4 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    margin-top: 0;
+}
+
+.alertbox p, .popup-card p {
+    color: #555;
+}
+
+.alertbox form, .popup-card form {
+    margin-top: 10px;
+}
+
+.alertbox input, .popup-card input[type="password"], .popup-card input[type="number"]  {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    width: 100%;
+    padding: 10px;
+    margin: 20px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+    width: 100%;
+}
+
+.popup-card .closepinbox {
+    font-size: 26px;
+    color: #444444;
+}
+
+.popup-card .closepinbox:hover {
+    cursor: pointer;
+    color: #e30000;
+}
+
+.alertbox button,  .popup-card button {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.alertbox button:hover, .popup-card button:hover {
+    background-color: #0025aa;
+}
+
+.header .logout {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    text-decoration: none;
+    color: #fa1100;
+}
+
+/* dashboard cards */
+
+.dashboard {
+
+    padding-top: 150px;
+}
+
+.dashboard h2 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+}
+
+/* Acdetals card */
+
+.acdetails {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 14px;
+    padding: 50px;
+    background-color: #021273;
+}
+
+.acdetails h4 {
+    color: #fff;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+}
+
+
+.acdetails button {
+
+        font-family: "Poppins", sans-serif;
+        font-weight: 500;
+        width: 100%;
+        padding: 10px;
+        background-color: #007bff;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        font-size: 14px;
+        cursor: pointer;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.acdetails button:hover {
+    color: #0025aa;
+    background-color: #fff;
+}
+
+/* credit card */
+
+.credit {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 14px;
+    padding: 50px;
+    background-color: #0077B6;
+}
+
+.credit h4 {
+    color: #fff;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+}
+
+
+.credit button {
+
+        font-family: "Poppins", sans-serif;
+        font-weight: 500;
+        width: 100%;
+        padding: 10px;
+        background-color: #03045E;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        font-size: 14px;
+        cursor: pointer;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.credit button:hover {
+    color: #029f19;
+    background-color: #fff;
+}
+
+/* Acdetals card */
+
+.debit {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 14px;
+    padding: 50px;
+    background-color: #2337C6;
+}
+
+.debit h4 {
+    color: #fff;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+}
+
+
+.debit button {
+
+        font-family: "Poppins", sans-serif;
+        font-weight: 500;
+        width: 100%;
+        padding: 10px;
+        background-color: #007bff;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        font-size: 14px;
+        cursor: pointer;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.debit button:hover {
+    color: #e30000;
+    background-color: #fff;
+}
+
+
+.debit h2 {
+    color: #0025aa;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+
+/* AC Details Page */
+
+.card {
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.card .card-header {
+    background-color: #0025aa;
+    color: white;
+}
+
+.card h2, h4 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+p, li {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+}
+
+.btn-primary, .btn-secondary {
+    margin: 10px;
+}
+
+
+
+/* Debit Page */
+
+.clickbtn button, .debitAmount h {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+}
+

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Your Bank - Online Banking</title>
+    <link rel="icon" href="./images/favicon.png" />
+    <link rel="stylesheet" href="./style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            background-image: url(./images/dashboarbg.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+
+</head>
+<body>
+
+    <!-- Account Page Verify Popup -->
+
+    <div row id="acPopup1" class="popup-container" style="display: none;">
+        <div col-md-2 class="popup-card">
+            <i class="fa-solid fa-circle-xmark mb-4 closepinbox" id="closeAcPopup1"></i><br/>
+            <h4>Verify Your PIN</h4>
+            <input type="password" id="pinInputAcPage1" maxlength="4" placeholder="Enter 4-digit PIN">
+            <button class="accountVerify" id="verifyPin1">Verify</button>
+        </div>
+    </div>
+
+    <!-- Credit Page Verify Popup -->
+
+    <div row id="acPopup2" class="popup-container" style="display: none;">
+        <div col-md-2 class="popup-card">
+            <i class="fa-solid fa-circle-xmark mb-4 closepinbox" id="closeAcPopup2"></i><br/>
+            <h4>Verify Your PIN</h4>
+            <input type="password" id="pinInputAcPage2" maxlength="4" placeholder="Enter 4-digit PIN">
+            <button class="accountVerify" id="verifyPin2">Verify</button>
+        </div>
+    </div>
+
+    <!-- Debit Page Verify Popup -->
+
+    <div row id="acPopup3" class="popup-container" style="display: none;">
+        <div col-md-2 class="popup-card">
+            <i class="fa-solid fa-circle-xmark mb-4 closepinbox" id="closeAcPopup3"></i><br/>
+            <h4>Verify Your PIN</h4>
+            <input type="password" id="pinInputAcPage3" maxlength="4" placeholder="Enter 4-digit PIN">
+            <button class="accountVerify" id="verifyPin3">Verify</button>
+        </div>
+    </div>
+
+
+    <!-- Home PAge Icon -->
+
+    <div class="container mt-4">
+        <a href="./index.html"> <i class="fa-solid fa-house" style="color: #0025aa; font-size: 25px;"></i></a>
+    </div>
+
+    <!-- Account Details, Credit & Debit Cards -->
+
+    <div class="container">
+        <div class="row dashboard g-5 text-center mb-2 ">
+            <h2>Dash Board</h2>
+            <div class="col-md-4">
+                <div class="acdetails">
+                    <h4 class="mb-5"><i class="fa-solid fa-user"></i> &nbsp;Account Details</h4>
+                    <button id="openAcPopup1"><i class="fa-solid fa-circle-chevron-right"></i> &nbsp;Get Details</button>
+                </div>
+            </div>
+                
+            <div class="col-md-4">
+                <div class="credit">
+                    <h4 class="mb-5"><i class="fa-solid fa-arrow-down-wide-short"></i> &nbsp;Credit</h4>
+                    <button id="openAcPopup2"><i class="fa-solid fa-circle-chevron-right"></i> &nbsp;Add Funds</button>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="debit">
+                    <h4 class="mb-5"><i class="fa-solid fa-arrow-up-wide-short"></i> &nbsp;Debit</h4>
+                    <button id="openAcPopup3"><i class="fa-solid fa-circle-chevron-right"></i> &nbsp;Withdraw Funds</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+
+    // Verify AC Details PIN - Popup
+
+    document.addEventListener('DOMContentLoaded', () => {
+
+        const openAcPopupBtn = document.querySelector('#openAcPopup1');
+        const acPopup = document.querySelector('#acPopup1');
+        const acCloseBtn = document.querySelector('#closeAcPopup1');
+
+        const openAcPopupBtn2 = document.querySelector('#openAcPopup2');
+        const acCloseBtn2 = document.querySelector('#closeAcPopup2');
+        openAcPopupBtn2.addEventListener('click', () => {
+        acPopup2.style.display = 'block';
+    });
+
+        const openAcPopupBtn3 = document.querySelector('#openAcPopup3');
+        const acCloseBtn3 = document.querySelector('#closeAcPopup3');
+        openAcPopupBtn3.addEventListener('click', () => {
+        acPopup3.style.display = 'block';
+    });
+
+        openAcPopupBtn.addEventListener('click', () => {
+        acPopup.style.display = 'block';
+    });
+
+        acCloseBtn.addEventListener('click', () => {
+        acPopup.style.display = 'none';
+    });
+    acCloseBtn2.addEventListener('click', () => {
+        acPopup2.style.display = 'none';
+    });
+
+    acCloseBtn3.addEventListener('click', () => {
+        acPopup3.style.display = 'none';
+    });
+
+    window.addEventListener('click', (event) => {
+        
+        if (event.target == acPopup) {
+            acPopup.style.display = 'none';
+        }
+    });
+
+    window.addEventListener('click', (event) => {
+        
+        if (event.target == acPopup3) {
+            acPopup3.style.display = 'none';
+        }
+    });
+
+    const verifyAcBtn = document.querySelector('#verifyPin1');
+
+    verifyAcBtn.addEventListener('click', () => {
+
+    const acPin = document.querySelector('#pinInputAcPage1').value;
+
+    const acValidPin = '1234';
+
+    if (acPin === acValidPin) {
+        // Redirect to account page if PIN is correct
+        alert ("PIN Verification Successful!")
+        window.location.href = 'account.html';
+        } else {
+        // Show an alert if PIN is incorrect
+        alert('Enter a valid PIN');
+        }
+    });
+
+
+
+
+    const verifyAcBtn2 = document.querySelector('#verifyPin2');
+
+    verifyAcBtn2.addEventListener('click', () => {
+
+    const acPin2 = document.querySelector('#pinInputAcPage2').value;
+
+    const acValidPin2 = '1234';
+
+    if (acPin2 === acValidPin2) {
+        // Redirect to account page if PIN is correct
+        alert ("PIN Verification Successful!")
+        window.location.href = 'credit.html';
+        } else {
+        // Show an alert if PIN is incorrect
+        alert('Enter a valid PIN');
+        }
+    });
+
+
+
+
+    const verifyAcBtn3 = document.querySelector('#verifyPin3');
+
+    verifyAcBtn3.addEventListener('click', () => {
+
+    const acPin3 = document.querySelector('#pinInputAcPage3').value;
+
+    const acValidPin3 = '1234';
+
+    if (acPin3 === acValidPin3) {
+        // Redirect to account page if PIN is correct
+        alert ("PIN Verification Successful!")
+        window.location.href = 'debit.html';
+        } else {
+        // Show an alert if PIN is incorrect
+        alert('Enter a valid PIN');
+        }
+    });
+});
+
+
+    
+// Verify  Details PIN - Popup
+
+document.addEventListener('DOMContentLoaded', () => {
+
+    const openCreditPopupBtn = document.querySelector('#openCreditPopup');
+    const creditPopup = document.querySelector('#creditPopup');
+    const creditCloseBtn = document.querySelector('#closeCreditPopup');
+
+    openCreditPopupBtn.addEventListener('click', () => {
+    creditPopup.style.display = 'block';
+});
+
+    creditCloseBtn.addEventListener('click', () => {
+    creditPopup.style.display = 'none';
+    });
+
+    window.addEventListener('click', (event) => {
+
+    if (event.target == creditPopup) {
+        creditPopup.style.display = 'none';
+    }
+});
+
+    const verifyCreditBtn = document.querySelector('#verifyCreditPin');
+
+    verifyCreditBtn.addEventListener('click', () => {
+
+    const creditPin = document.querySelector('#pinInputCreditPage').value;
+
+    const creditValidPin = '1234';
+
+    if (creditPin === creditValidPin) {
+        // Redirect to account page if PIN is correct
+        alert ("PIN Verification Successful!")
+        window.location.href = 'credit.html';
+        } else {
+         // Show an alert if PIN is incorrect
+        alert('Enter a valid PIN');
+        }
+    });
+});
+
+
+
+
+
+    </script>
+</body>
+</html>
